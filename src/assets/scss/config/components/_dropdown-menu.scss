@@ -1,0 +1,16 @@
+.ant-dropdown {
+    &-menu {
+        &-item {
+            padding: 8px 12px !important;
+        }
+
+        &-title {
+            &-content {
+                display: flex;
+                align-items: center;
+                gap: 12px;
+                @include body-3(var(--color-black-1))
+            }
+        }
+    }
+}

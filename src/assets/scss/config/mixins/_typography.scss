@@ -1,0 +1,97 @@
+@mixin headline-1 ($color: null) {
+    @if $color !=null {
+        color: $color;
+    }
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 140%;
+}
+
+@mixin subtitle-1 ($color: null) {
+    @if $color !=null {
+        color: $color;
+    }
+
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+@mixin subtitle-2 ($color: null) {
+    @if $color !=null {
+        color: $color;
+    }
+
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+@mixin subtitle-3 ($color: null) {
+    @if $color !=null {
+        color: $color;
+    }
+
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 130%;
+}
+
+@mixin body-1 ($color: null) {
+    @if $color !=null {
+        color: $color;
+    }
+
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+@mixin body-2 ($color: null) {
+    @if $color !=null {
+        color: $color;
+    }
+
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+@mixin body-3 ($color: null) {
+    @if $color !=null {
+        color: $color;
+    }
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 140%;
+}
+
+@mixin body-4 ($color: null) {
+    @if $color !=null {
+        color: $color;
+    }
+
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 140%;
+}
+
+@mixin body-5 ($color: null) {
+    @if $color !=null {
+        color: $color;
+    }
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 130%;
+}
+
+@mixin button-1 ($color: null) {
+    @if $color !=null {
+        color: $color;
+    }
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 130%;
+}

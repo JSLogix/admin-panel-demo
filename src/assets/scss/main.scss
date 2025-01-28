@@ -1,0 +1,11 @@
+@import "config", "form";
+
+.social-icons {
+  img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin: 0 4px;
+  }
+}

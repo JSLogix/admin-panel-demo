@@ -1,0 +1,242 @@
+@import "config/mixins", "config/variables", "config/components",
+  "components/auth";
+
+* {
+  font-family: "Tilda Sans", sans-serif !important;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0;
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+
+.ant-popover {
+  max-width: 320px;
+}
+
+.ant-switch {
+  background-color: var(--color-black-6);
+}
+
+.ant-space {
+  display: flex;
+}
+
+.ant-divider {
+  border-color: var(--color-black-7);
+
+  &-horizontal {
+    margin: 16px 0;
+  }
+
+  &-vertical {
+    height: 32px;
+    margin: 0;
+  }
+}
+
+.ant-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+
+  & > .ant-row {
+    margin-bottom: 16px;
+  }
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 8px;
+  transition: all 0.3s ease-in-out;
+
+  &-item {
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    padding: 0 16px;
+    display: flex;
+    display: block;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    &-row {
+      display: flex;
+      align-items: center;
+      border-radius: 0px;
+      cursor: pointer;
+      border-bottom: 1px solid transparent;
+      transition: all 0.3s ease-in-out;
+
+      &-col {
+        padding: 16px 10px;
+        @include body-3;
+        color: #010b1b;
+        flex: 1;
+      }
+    }
+
+    &-cell {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      input {
+        width: 40px;
+        height: 24px;
+        text-align: center;
+        border: 1px solid var(--color-black-7);
+        border-radius: 8px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      &-arrow {
+        width: 22px;
+        height: 22px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 8px;
+        border: 1px solid #e2e6ed;
+        background: #f2f4f7;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease-in-out;
+      }
+    }
+
+    .accordion {
+      margin-top: 0px;
+      // width: calc(100% - 32px);
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 8px;
+
+      &-content {
+        border: 1px solid #e2e6ed;
+        border-radius: 8px;
+        padding: 16px;
+      }
+
+      &-item {
+        border: 1px solid #e2e6ed;
+      }
+    }
+
+    &-active {
+      padding-bottom: 16px;
+
+      & > .accordion {
+        margin-top: 16px;
+
+        &-item-row {
+          border-color: #e2e6ed;
+
+          .accordion-item {
+            &-cell {
+              &-arrow {
+                width: 22px;
+                height: 22px;
+                border-radius: 8px;
+                background-color: #4a51dd;
+                border-color: transparent;
+
+                .icon {
+                  transform: rotate(180deg);
+                  fill: var(--color-blue1) !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-children {
+      & > .accordion {
+        &-item {
+          &-row {
+            .accordion-item-cell-arrow {
+              opacity: 1;
+              visibility: visible;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.table {
+  &-header {
+    margin-bottom: 8px;
+  }
+  &-row {
+    display: flex;
+    width: 100%;
+    border-radius: 8px;
+    background-color: #e2e6ed;
+    padding: 0 16px;
+  }
+  &-col {
+    padding: 14px 10px;
+    &:first-child {
+      flex: unset;
+    }
+    &-cell {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      @include body-3;
+      color: #626a77;
+      i {
+        min-width: 22px;
+      }
+    }
+  }
+  &-body {
+  }
+}
+
+.video-create-tags {
+  @include body-2;
+  overflow-x: scroll;
+}
+
+.ant-input-number-input-wrap {
+  width: 90% !important;
+}
+
+.transcode-title {
+  @include body-2(var(--color-black-1));
+}

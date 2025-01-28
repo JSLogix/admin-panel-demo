@@ -1,0 +1,36 @@
+@import 'mixins/breakpoints', 'mixins/typography';
+
+
+@mixin image($fit: cover) {
+    width: 100%;
+    height: 100%;
+    object-fit: $fit;
+    object-position: center;
+}
+
+@mixin slice($limit) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $limit;
+}
+
+@mixin text ($size: 20, $color: var(--black-1), $weight: 400, $height: 130%) {
+    & {
+        --text-size: var(--size-text-#{$size});
+    }
+
+    & {
+
+        font-weight: $weight;
+        line-height: $height;
+        color: $color;
+    }
+
+    & {
+        font-family: 'Tilda Sans',
+            sans-serif !important;
+        font-size: var(--text-size);
+    }
+}

@@ -1,0 +1,29 @@
+:root {
+  // #region colors
+  --color-red: red;
+  --color-green: green;
+  --color--white: 255, 255, 255;
+  --color-primary: 74, 81, 221;
+  --color-primary-1: rgb(var(--color-primary));
+  --color-black: 1, 11, 27;
+  --color-black-1: rgb(var(--color-black));
+  --color-black-2: rgb(38, 44, 52);
+  --color-black-3: rgb(88, 92, 100);
+  --color-black-4: rgb(131, 136, 144);
+  --color-black-5: rgb(175, 175, 175);
+  --color-black-6: rgb(195, 203, 217);
+  --color-black-7: rgb(221, 226, 234);
+  --color-black-8: rgb(234, 238, 245);
+  --color-black-9: rgb(239, 243, 249);
+  --color-black-10: rgb(242, 244, 247);
+  --color-white: 255, 255, 255;
+  --color-white-1: rgb(var(--color-white));
+  --color-green: 63, 156, 95;
+  --color-green-1: rgb(var(--color-green));
+  --color-green-2: rgba(235, 247, 239, 1);
+  --color-green-3: rgba(170, 212, 185, 1);
+  --color-red: 218, 2, 2;
+  --color-red-1: rgb(var(--color-red));
+  --color-blue1: #0d3067;
+  --color-blue-1: 13, 48, 103;
+}

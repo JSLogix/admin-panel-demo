@@ -1,0 +1,28 @@
+:root {
+    --aside-width: 300px;
+    --aside-menu-height: 50px;
+    --header-height: 70px;
+    --element-size-small: 32px;
+    --element-size-default: 40px;
+    --element-size-large: 44px;
+
+
+    --size-icon-small: 16px;
+    --size-icon-default: 20px;
+    --size-icon-large: 24px;
+
+
+
+
+    --size-auth-width: 600px;
+    --size-auth-height: 604px;
+
+    --size-auth-header: 77px;
+
+    @include devices(xs){
+        --size-auth-width:95%;
+        --size-auth-height:500px;
+      
+    }
+
+}
