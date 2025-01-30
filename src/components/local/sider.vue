@@ -48,7 +48,6 @@ import { ref, defineComponent, type Ref } from "vue";
 import { LayoutSider, Menu, MenuItem, SubMenu } from "ant-design-vue";
 import { PerfectScrollbar } from "vue3-perfect-scrollbar";
 import { list } from "@/constants/menu.ts";
-import { ERole } from "@/utilities/enums";
 export default defineComponent({
   components: {
     LayoutSider,
@@ -64,7 +63,7 @@ export default defineComponent({
       isCollapsed.value = !isCollapsed.value;
     };
 
-    return { list, isCollapsed, ERole, toCollapsed };
+    return { list, isCollapsed, toCollapsed };
   },
 });
 </script>

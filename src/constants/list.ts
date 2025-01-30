@@ -1,19 +1,8 @@
 import { i18n } from "@/plugins/i18n";
-import { ERole, ELang } from "@/utilities/enums";
+import { ELang } from "@/utilities/enums";
 
-export const LRole = [
-  {
-    value: ERole.ADMIN,
-    label: "ADMIN",
-  },
-  {
-    value: ERole.CLIENT,
-    label: "CLIENT",
-  },
-];
 export const LSM = new Set(["INSTAGRAM", "TELEGRAM", "FACEBOOK", "YOUTUBE"]);
-export const toGetRole = (value: string) =>
-  LRole.find((item) => item.value === value);
+
 export const LLang = [
   {
     label: "O'zbek",
@@ -91,14 +80,14 @@ export const LStatus = [
 export const LAppealStatus = [
   {
     label: i18n.global.t("listStatus.new"),
-    value: 'NEW',
+    value: "NEW",
   },
   {
     label: i18n.global.t("listStatus.in_progress"),
-    value: 'PROCESSED',
+    value: "PROCESSED",
   },
   {
     label: i18n.global.t("listStatus.finished"),
-    value: 'DELAYED',
+    value: "DELAYED",
   },
 ];

@@ -79,7 +79,7 @@ import { defineComponent, ref, reactive } from "vue";
 import { useHttp } from "@/api";
 import { message, Pagination } from "ant-design-vue";
 import { cloneDeep } from "sloadash";
-import { Rules, toValidateLang, toSetFormData } from "@/utilities/mixins";
+import { Rules } from "@/utilities/mixins";
 import { Card, LPopconfirm, GModal, FormItem, Table } from "../index";
 
 export default defineComponent({
@@ -159,11 +159,11 @@ export default defineComponent({
           "ru" in form[key] &&
           "en" in form[key]
         ) {
-          rules[key] = {
-            validator: toValidateLang,
-            trigger: "blur",
-            message: "Ushbu qator to'ldirilishi shart !",
-          };
+          // rules[key] = {
+          //   validator: toValidateLang,
+          //   trigger: "blur",
+          //   message: "Ushbu qator to'ldirilishi shart !",
+          // };
         }
       });
     };
@@ -245,7 +245,7 @@ export default defineComponent({
         formRef.value.validate().then(async (): Promise<void> => {
           let newForm = form;
           if (props.isFormData) {
-            newForm = toSetFormData(form);
+            // newForm = toSetFormData(form);
           }
           const response = await $post(props.module + "/create", newForm);
           if (response.statusText == "OK") {
@@ -275,7 +275,7 @@ export default defineComponent({
         formRef.value.validate().then(async (): Promise<void> => {
           let newForm = form;
           if (props.isFormData) {
-            newForm = toSetFormData(form);
+            // newForm = toSetFormData(form);
           }
           const response = await $patch(props.module + "/update", newForm);
           if (response.statusText == "OK") {
